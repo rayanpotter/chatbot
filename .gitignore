@@ -1,0 +1,18 @@
+# Python
+*.pyc
+__pycache__/
+
+# Flask
+instance/
+*.db
+*.sqlite
+
+# Docker
+docker-compose.override.yml
+Dockerfile
+
+# MongoDB data
+mongodb_data/
+
+# Environment file
+.env

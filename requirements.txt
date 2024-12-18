@@ -1,0 +1,7 @@
+flask
+pymongo
+nltk
+spacy
+transformers
+language-tool-python
+gunicorn  
