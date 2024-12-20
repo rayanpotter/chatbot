@@ -4,21 +4,23 @@ services:
   web:
     build: .
     ports:
-      - "5000:5000"  
+      - "5000:5000"
     volumes:
-      - .:/app     
+      - .:/app
+      - /app/static
     environment:
-      - FLASK_ENV=development  
-      - MONGO_URI=mongodb://mongo:27017/chatbot  
+      - FLASK_ENV=development
+      - FLASK_APP=app.py
+      - MONGO_URI=mongodb://mongo:27017/chatbot
     depends_on:
-      - mongo  
+      - mongo
   mongo:
     image: mongo:5.0
     container_name: chatbot_mongo
     ports:
-      - "27017:27017"  
+      - "27017:27017"
     volumes:
-      - mongodb_data:/data/db 
+      - mongodb_data:/data/db
 
 volumes:
   mongodb_data:
