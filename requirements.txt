@@ -5,3 +5,5 @@ spacy
 transformers
 language-tool-python
 gunicorn  
+pyspellchecker
+textblob
